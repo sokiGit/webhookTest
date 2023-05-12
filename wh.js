@@ -6,10 +6,10 @@ function run() {
   const wh = core.getInput('WH');
   const req = XMLHttpRequest();
   const hdrs = {
-    username: "Webhook testing",
-    avatar_url: "",
-    content: "This is a testing message UwU",
-    Content-type: "application/json"
+    'username': "Webhook testing",
+    'avatar_url': "",
+    'content': "This is a testing message UwU",
+    'Content-type': "application/json"
   }
   req.setRequestHeader(JSON.stringify(hdrs));
   req.open("POST", wh);
