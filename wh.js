@@ -1,11 +1,17 @@
-const core = require('@actions/core');
-const wh = core.getInput('WH');
-const req = XMLHttpRequest();
-const hdrs = {
-  username: "Webhook testing",
-  avatar_url: "",
-  content: "This is a testing message UwU",
-  Content-type: "application/json"
+function run() {
+  console.log("start");
+  const core = require('@actions/core');
+  const wh = core.getInput('WH');
+  const req = XMLHttpRequest();
+  const hdrs = {
+    username: "Webhook testing",
+    avatar_url: "",
+    content: "This is a testing message UwU",
+    Content-type: "application/json"
+  }
+  req.setRequestHeader(JSON.stringify(hdrs));
+  req.open("POST", wh);
+  console.log("finish");
 }
-req.setRequestHeader(JSON.stringify(hdrs));
-req.open("POST", wh)
+
+run();
