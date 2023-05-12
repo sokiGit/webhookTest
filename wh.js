@@ -1,3 +1,5 @@
+console.log("Hello, World!");
+
 function run() {
   console.log("start");
   const core = require('@actions/core');
