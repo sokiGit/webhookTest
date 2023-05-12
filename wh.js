@@ -2,7 +2,7 @@ console.log("Hello, World!");
 
 function run() {
   console.log("start");
-  const core = require(['@actions/core'], function(foo) {});
+  const core = require(['core'], function(foo) {});
   const wh = core.getInput('WH');
   const req = XMLHttpRequest();
   const hdrs = {
