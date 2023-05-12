@@ -1,4 +1,5 @@
-const wh = "https://ptb.discord.com/api/webhooks/1106641391142047816/S9mr_JuSccLZGQM1DLRr_LcgpKIhyrFrhPEg2PjYPYoELUvjdo1b0ZBjXhyj7163xVmG";
+const core = require('@actions/core');
+const wh = core.getInput('WH');
 const req = XMLHttpRequest();
 const hdrs = {
   username: "Webhook testing",
